@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8548568b10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Vaibhavi</span><br>Harde from Nagpur</h1>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------About section --------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Vaibhavi.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>As a highly skilled and motivated web developer, I am passionate about creating 
+                        innovative websites with exceptional user experiences. 
+                        I am proficient in front-end technologies such as HTML5, CSS3, and JavaScript, 
+                        as well as back-end technologies like Node.js and Express. 
+                        With expertise in both front-end and back-end development, 
+                        I can deliver end-to-end solutions for web applications. 
+                        I have [insert number of years] years of experience, 
+                        delivering successful projects for clients ranging from small 
+                        businesses to large corporations. I am detail-oriented, collaborative, and a problem solver.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experienc')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Beginner</li>
+                                <li><span>Web Development</span><br>Intermediate</li>
+                                <li><span>Java Programming</span><br>Intermediate</li>
+                                <li><span>DataBase Management</span><br>Expert</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experienc">
+                            <ul>
+                                <li><span>UI/UX</span><br>NA</li>
+                                <li><span>Web Development</span><br>NA</li>
+                                <li><span>Java Programming</span><br>NA</li>
+                                <li><span>DataBase Management</span><br>NA</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>SSC</span><br>66.60%</li>
+                                <li><span>Diploma In Computer technology</span><br>77.56%</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Service and projects--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Advanced Facial Recognition Attendance System</h2>
+                    <p>Introducing an advanced facial recognition attendance 
+                        system! Leveraging cutting-edge technology, this system accurately 
+                        records attendance by capturing and analyzing facial features in real-time. 
+                        With seamless integration and robust security measures, 
+                        it ensures reliable and efficient attendance tracking for modern workplaces. 
+                        Experience the future of attendance management with our state-of-the-art facial 
+                        recognition system.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>College Recommendation System</h2>
+                    <p>Presenting a college recommendation system that simplifies the 
+                        college selection process! Utilizing machine learning algorithms 
+                        and personalized data analysis, this system provides tailored 
+                        recommendations based on individual preferences and academic profiles. 
+                        Say goodbye to decision fatigue and make informed choices with our intelligent 
+                        college recommendation system.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Human Action Detection System</h2>
+                    <p>Introducing a powerful human action detection system! 
+                        Using advanced computer vision algorithms, this system 
+                        can accurately detect and analyze human actions in real-time, 
+                        ranging from simple gestures to complex movements. 
+                        With its versatility and precision, it has diverse 
+                        applications in fields such as security, healthcare, and entertainment. 
+                        Discover the potential of human action detection with our cutting-edge system.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+</body>
+</html>
